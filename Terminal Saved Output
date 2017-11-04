@@ -1,0 +1,178 @@
+Last login: Wed May 31 07:14:04 on ttys000
+Viets-MacBook-Pro:~ VietAnh$ cd Documents/Courses/Parallel/final/Code/
+Viets-MacBook-Pro:Code VietAnh$ g++ -o TSP_sequential TSP_sequential.cpp
+TSP_sequential.cpp:72:1: warning: control reaches end of non-void function
+      [-Wreturn-type]
+}
+^
+TSP_sequential.cpp:108:1: warning: control reaches end of non-void function
+      [-Wreturn-type]
+}
+^
+TSP_sequential.cpp:146:1: warning: control reaches end of non-void function
+      [-Wreturn-type]
+}
+^
+TSP_sequential.cpp:156:1: warning: control reaches end of non-void function
+      [-Wreturn-type]
+}
+^
+TSP_sequential.cpp:170:1: warning: control reaches end of non-void function
+      [-Wreturn-type]
+}
+^
+TSP_sequential.cpp:182:1: warning: control reaches end of non-void function
+      [-Wreturn-type]
+}
+^
+TSP_sequential.cpp:210:1: warning: control may reach end of non-void function
+      [-Wreturn-type]
+}
+^
+TSP_sequential.cpp:244:1: warning: control reaches end of non-void function
+      [-Wreturn-type]
+}
+^
+TSP_sequential.cpp:299:1: warning: control reaches end of non-void function
+      [-Wreturn-type]
+}
+^
+TSP_sequential.cpp:316:1: warning: control reaches end of non-void function
+      [-Wreturn-type]
+}
+^
+10 warnings generated.
+Viets-MacBook-Pro:Code VietAnh$ ./TSP_sequential
+The current best path distance is: 
+64417.757812 
+-------------------- 
+* Total sequential time = 18.000000
+Viets-MacBook-Pro:Code VietAnh$ mpicxx TSP_parallel_stepping_tone.cpp -o TSP_parallel_stepping_tone
+TSP_parallel_stepping_tone.cpp:81:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_parallel_stepping_tone.cpp:117:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_parallel_stepping_tone.cpp:155:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_parallel_stepping_tone.cpp:166:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_parallel_stepping_tone.cpp:181:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_parallel_stepping_tone.cpp:193:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_parallel_stepping_tone.cpp:222:1: warning: control may reach end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_parallel_stepping_tone.cpp:256:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_parallel_stepping_tone.cpp:291:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_parallel_stepping_tone.cpp:308:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+10 warnings generated.
+Viets-MacBook-Pro:Code VietAnh$ mpiexec -n 2 ./TSP_parallel_stepping_tone
+
+
+The current best distance is:
+64278.726562 
+-------------------- 
+* Total parallel time = 9.151219
+Viets-MacBook-Pro:Code VietAnh$ mpiexec -n 4 ./TSP_parallel_stepping_tone
+
+
+
+
+The current best distance is:
+67804.398438 
+-------------------- 
+* Total parallel time = 5.524904
+Viets-MacBook-Pro:Code VietAnh$ mpiexec -n 8 ./TSP_parallel_stepping_tone
+
+
+
+
+
+
+
+
+The current best distance is:
+68212.398438 
+-------------------- 
+* Total parallel time = 5.654655
+Viets-MacBook-Pro:Code VietAnh$ mpicxx TSP_common_population.cpp -o TSP_common_population
+TSP_common_population.cpp:81:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_common_population.cpp:117:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_common_population.cpp:153:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_common_population.cpp:164:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_common_population.cpp:178:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_common_population.cpp:190:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_common_population.cpp:219:1: warning: control may reach end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_common_population.cpp:253:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_common_population.cpp:288:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+TSP_common_population.cpp:305:1: warning: control reaches end of non-void
+      function [-Wreturn-type]
+}
+^
+10 warnings generated.
+Viets-MacBook-Pro:Code VietAnh$ mpiexec -n 2 ./TSP_common_population
+The current best distance is:
+63453.632812 
+-------------------- 
+* Total parallel time = 9.706834
+Viets-MacBook-Pro:Code VietAnh$ mpiexec -n 4 ./TSP_common_population
+The current best distance is:
+60738.070312 
+-------------------- 
+* Total parallel time = 7.802068
+Viets-MacBook-Pro:Code VietAnh$ mpiexec -n 8 ./TSP_common_population
+The current best distance is:
+62542.898438 
+-------------------- 
+* Total parallel time = 8.859792
+Viets-MacBook-Pro:Code VietAnh$ 
